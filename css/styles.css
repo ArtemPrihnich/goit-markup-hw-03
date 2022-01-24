@@ -26,6 +26,11 @@ body {
   list-style: none;
 }
 
+/* Хедер */
+.header-line {
+  border: 1px solid #ececec;
+}
+
 /* Логотип */
 .logo {
   display: block;
@@ -115,14 +120,16 @@ body {
 
 /* Герой */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background: #2f303a;
   text-align: center;
 }
 
 .hero-titel {
-  margin-top: 0px;
-  margin-bottom: 40px;
-  padding-top: 200px;
+  margin: 0 auto 40px auto;
+  max-width: 696px;
+
   color: var(--titel-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -135,7 +142,6 @@ body {
 .button {
   display: inline-block;
   border: 1px solid transparent;
-  margin-bottom: 200px;
   padding: 10px 32px;
   border-radius: 4px;
   background-color: var(--accent-color);
@@ -166,9 +172,12 @@ body {
   overflow: hidden;
 }
 
+.advantage-section {
+  padding-top: 94px;
+}
+
 .advantage {
   display: flex;
-  padding-top: 94px;
   padding-bottom: 0;
 }
 
@@ -199,10 +208,14 @@ body {
 }
 
 /* Заголовок секций "Чем мы занимаемся" и "Наша команда"*/
+.about-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-titel {
   margin-top: 0;
   margin-bottom: 50px;
-  padding-top: 94px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -212,7 +225,6 @@ body {
 .work-examples {
   display: flex;
   padding-top: 0;
-  padding-bottom: 94px;
 }
 
 .photo {
@@ -228,20 +240,20 @@ body {
 }
 
 /* Команда */
-.team {
-  display: flex;
-  margin-right: 30px;
+.team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.team-container {
-  padding-bottom: 94px;
+.team {
+  display: flex;
 }
 
 .team-section {
   background-color: #f5f4fa;
 }
 
-.team .team-list {
+.team-list {
   margin-right: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -249,14 +261,18 @@ body {
   background-color: #fff;
 }
 
-.team .team-list:last-child {
+.team-list:last-child {
   margin-right: 0;
+}
+
+.employee-information {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-list .titel {
   margin-top: 0;
   margin-bottom: 10px;
-  padding-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -266,7 +282,6 @@ body {
 .team-list .text {
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 30px;
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.2;
@@ -275,13 +290,15 @@ body {
 
 /* Футер */
 .footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: #2f303a;
 }
 
 .logo-footer {
   display: block;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
@@ -296,8 +313,6 @@ body {
 }
 
 .address {
-  padding-bottom: 60px;
-  width: 230px;
   color: var(--titel-text-color);
   font-size: 14px;
   line-height: 1.7;
@@ -305,12 +320,7 @@ body {
 }
 
 .address .text {
-  margin: 0;
-  padding-bottom: 9px;
-}
-
-.address .text:last-child {
-  padding-bottom: 0;
+  margin: 0 0 9px 0;
 }
 
 .address .link:hover,
@@ -319,17 +329,23 @@ body {
 }
 
 .footer-contacts {
+  display: block;
+  margin: 0;
+  margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 
-/* ПОРТФОЛИО */
-.header-line {
-  border: 1px solid #ececec;
+.footer-contacts:last-child {
+  margin-bottom: 0;
 }
+
+/* ПОРТФОЛИО */
 
 /* Фильтр */
 .container-portfolio {
+  display: flex;
+  flex-wrap: wrap;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -337,14 +353,9 @@ body {
   margin-right: auto;
 }
 
-.catalog {
-  display: flex;
-}
-
 .filter {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -374,19 +385,19 @@ body {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 94px;
 }
 
 .works {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
 }
 
 .works:nth-child(3n) {
@@ -397,6 +408,12 @@ body {
   margin-bottom: 0;
 }
 
+.works-info {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: transparent;
+}
+
 /* Примеры работ */
 .works .link {
   color: var(--primary-text-color);
@@ -404,8 +421,7 @@ body {
 }
 
 .works .titel {
-  margin: 0;
-  padding: 20px 24px 4px 24px;
+  margin: 0 0 4px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -414,7 +430,6 @@ body {
 
 .works .text {
   margin: 0;
-  padding: 0 24px 20px 24px;
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.9;
