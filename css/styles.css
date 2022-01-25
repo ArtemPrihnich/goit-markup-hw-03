@@ -360,8 +360,15 @@ body {
   margin-right: auto;
 }
 
-.filter-list {
+.filter-button {
   margin-right: 8px;
+}
+
+.filter-button:last-child {
+  margin-right: 0;
+}
+
+.filter-list {
   padding: 6px 22px;
   border-radius: 4px;
   border: transparent;
